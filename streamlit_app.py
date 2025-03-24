@@ -5,7 +5,7 @@ import pandas as pd
 import plotly.express as px
 
 # MongoDB Connection
-MONGO_URI = "mongodb+srv://ateeb626:Alexrider123@cluster0.kwop7.mongodb.net/?authMechanism=SCRAM-SHA-1"
+MONGO_URI = st.secrets["MONGO"]["MONGO_URI"]
 client = MongoClient(MONGO_URI)
 db = client["test"]
 orders_collection = db["orders"]
